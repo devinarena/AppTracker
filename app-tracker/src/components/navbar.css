@@ -1,0 +1,52 @@
+.navbar {
+    background: #464646;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    color: #fff;
+    margin-left: 2%;
+}
+
+.navbar ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar ul li {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a {
+    color: #fff;
+    font-size: 1.25vw;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    right: 0;
+}
+
+.dropdown ul {
+    display: none;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown ul {
+    display: flex;
+}
+
+.dropdown ul li {
+    display: block;
+}
