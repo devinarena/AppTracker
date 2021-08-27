@@ -1,4 +1,4 @@
-import './navbar.css'
+import './Navbar.css'
 
 /**
  * Builds the Navbar for application, containing a dropdown
@@ -13,9 +13,9 @@ const Navbar = () => {
             <div className="dropdown">
                 <h1>Menu</h1>
                 <ul className="menu">
-                    <li><a href="">Test</a></li>
-                    <li><a href="">Test</a></li>
-                    <li><a href="">Test</a></li>
+                    <li><a href="">Option 1</a></li>
+                    <li><a href="">Option 2</a></li>
+                    <li><a href="">Option 3</a></li>
                 </ul>
             </div>
         </div>

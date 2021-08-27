@@ -21,10 +21,20 @@
     background: #666;
     height: 100%;
     padding: 0 2vw;
+    cursor: pointer;
+    transition: background 1s ease;
+    -webkit-transition: background 1s ease;
+    -moz-transition: background 1s ease;
+    overflow: hidden;
+}
+
+.dropdown:hover {
+    background: #aaa;
 }
 
 .dropdown:hover > .menu {
-    display: flex;
+    height: auto;
+    opacity: 1;
 }
 
 .dropdown h1 {
@@ -32,9 +42,18 @@
 }
 
 .menu {
+    display: flex;
+    height: 0;
     position: absolute;
     list-style: none;
     flex-direction: column;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    opacity: 0;
     width: 100%;
     top: 10vh;
     right: 0;
@@ -43,9 +62,16 @@
 
 .menu li a {
     display: block;
-    width: 100%;
     text-decoration: none;
     font-size: 24px;
+    padding: 12px;
+    background: #888;
     color: #fff;
-    background: #999;
+    transition: background 1s ease;
+    -webkit-transition: background 1s ease;
+    -moz-transition: background 1s ease;
+}
+
+.menu li a:hover {
+    background: #ccc;
 }
