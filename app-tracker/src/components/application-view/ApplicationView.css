@@ -1,0 +1,9 @@
+.app-view {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: blue;
+}

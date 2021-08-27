@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import IT from './IT';
+import AppTracker from './AppTracker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <IT />
+    <AppTracker />
   </React.StrictMode>,
   document.getElementById('root')
 );
