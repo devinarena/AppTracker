@@ -25,16 +25,10 @@
     transition: background 1s ease;
     -webkit-transition: background 1s ease;
     -moz-transition: background 1s ease;
-    overflow: hidden;
 }
 
 .dropdown:hover {
     background: #aaa;
-}
-
-.dropdown:hover > .menu {
-    height: auto;
-    opacity: 1;
 }
 
 .dropdown h1 {
@@ -42,8 +36,8 @@
 }
 
 .menu {
+    visibility: hidden;
     display: flex;
-    height: 0;
     position: absolute;
     list-style: none;
     flex-direction: column;
@@ -53,7 +47,6 @@
     transition: opacity 1s ease;
     -webkit-transition: opacity 1s ease;
     -moz-transition: opacity 1s ease;
-    opacity: 0;
     width: 100%;
     top: 10vh;
     right: 0;
