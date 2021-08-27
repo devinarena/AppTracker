@@ -43,20 +43,23 @@ const Navbar = () => {
      * 
      * @returns void
      */
-    const hideMenu = () => {
-        if (menuRef.current.style.opacity === "0")
-            menuRef.current.style.visibility = "hidden";
+    const hideMenu = (e) => {
+        if (e.target === menuRef.current) {
+            if (menuRef.current.style.opacity === "0") {
+                menuRef.current.style.visibility = "hidden";
+            }
+        }
     }
 
     return (
         <div className="navbar">
             <h1>AppTracker</h1>
-            <div className="dropdown" onMouseEnter={fadeMenuIn} onMouseLeave={fadeMenuOut} onTransitionEnd={hideMenu}>
+            <div className="dropdown" onMouseEnter={fadeMenuIn} onMouseLeave={fadeMenuOut}>
                 <h1>Menu</h1>
-                <ul className="menu" style={{opactiy: 0}} ref={menuRef}>
-                    <li><a href="">Option 1</a></li>
-                    <li><a href="">Option 2</a></li>
-                    <li><a href="">Option 3</a></li>
+                <ul className="menu" style={{ opacity: 0 }} ref={menuRef} onTransitionEnd={e => hideMenu(e)}>
+                    <li><a href="option">Option 1</a></li>
+                    <li><a href="option">Option 2</a></li>
+                    <li><a href="option">Option 3</a></li>
                 </ul>
             </div>
         </div>
