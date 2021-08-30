@@ -1,4 +1,5 @@
 
+import{ AppsContext } from '../../ApplicationContext';
 import './ApplicationCard.css'
 
 /**
@@ -25,18 +26,24 @@ const ApplicationCard = (props) => {
     }
 
     return (
-        <div className="app-card">
-            <h1>{props.app.company}</h1>
-            <p>{props.app.date}</p>
-            <p>Interviews: {props.app.interviews}</p>
-            <p>Status: {status()}</p>
-            <div className="buttons">
-                <button type="submit">✉️</button>
-                <button type="submit">👔</button>
-                <button type="submit">❌</button>
-                <button type="submit">🗑️</button>
-            </div>
-        </div>
+        <AppsContext.Consumer>
+            {({removeApp}) => {
+                return (
+                    <div className="app-card">
+                        <h1>{props.app.company}</h1>
+                        <p>{props.app.date}</p>
+                        <p>Interviews: {props.app.interviews}</p>
+                        <p>{status()}</p>
+                        <div className="buttons">
+                            <button type="submit">✉️</button>
+                            <button type="submit">👔</button>
+                            <button type="submit">❌</button>
+                            <button type="submit" onClick={() => removeApp(props.app)}>🗑️</button>
+                        </div>
+                    </div>
+                );
+            }}
+        </AppsContext.Consumer>
     );
 }
 

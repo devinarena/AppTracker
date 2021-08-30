@@ -1,6 +1,6 @@
 import './ApplicationView.css'
 import ApplicationCard from './ApplicationCard'
-import { AppsContextConsumer } from '../../ApplicationData'
+import { AppsContext } from '../../ApplicationContext'
 
 /**
  * @file ApplicationViewer.js
@@ -16,12 +16,13 @@ import { AppsContextConsumer } from '../../ApplicationData'
  * @returns JSX for a ApplicationManager
  */
 const ApplicationView = () => {
-
     return (
         <div className="app-view">
-            <AppsContextConsumer>
-                {appsContext => appsContext.map((app, id) => { return (<ApplicationCard key={id} app={app}/>);})}
-            </AppsContextConsumer>
+            <AppsContext.Consumer>
+                {({ apps }) => {
+                    return [apps.map((app, id) => { return (<ApplicationCard key={id} app={app} />); })]
+                }}
+            </AppsContext.Consumer>
         </div>
     );
 }

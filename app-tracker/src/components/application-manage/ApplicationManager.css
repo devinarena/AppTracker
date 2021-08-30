@@ -1,21 +1,25 @@
 .app-manager {
     width: 40%;
-    height: 50%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
 }
 
+.app-manager form * {
+    margin: 1% 0;
+}
+
 .app-manager form {
     width: 75%;
-    height: 75%;
     padding: 2%;
     background: #444;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     border-radius: 25px;
+    overflow-y: hidden;
 }
 
 .app-manager form label {
@@ -42,7 +46,7 @@
 
 .app-manager form textarea {
     padding: 1%;
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     background: #333;
     border: 3px solid black;
     border-radius: 10px;
@@ -58,7 +62,7 @@
     border: 3px solid #666;
 }
 
-.app-manager form input[type=submit] {
+.app-manager form input[type=submit], .app-manager form button {
     border: 3px solid #00467c;
     border-radius: 10px;
     background: #0063B1;
@@ -72,7 +76,7 @@
     -moz-transition: border 1s ease, background 1s ease;
 }
 
-.app-manager form input[type=submit]:hover {
+.app-manager form input[type=submit]:hover, .app-manager form button:hover {
     border: 3px solid #0063B1;
     background: #0191ff;
 }

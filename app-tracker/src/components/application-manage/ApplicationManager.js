@@ -21,10 +21,7 @@ const ApplicationManager = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(company + "\n" + description);
     }
-
-    handleSubmit.bind(this);
 
     return (
         <div className="app-manager">
@@ -38,6 +35,7 @@ const ApplicationManager = () => {
                 </label>
                 <textarea name="company" rows="3" maxLength="800" onChange={e => setDescription(e.target.value)} />
                 <input type="submit" value="Add Application" />
+                <button name="advanced" >Advanced</button> 
             </form>
         </div>
     );
