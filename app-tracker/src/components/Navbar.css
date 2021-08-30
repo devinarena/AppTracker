@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #666;
+    background: #353535;
     height: 100%;
     padding: 0 2vw;
     cursor: pointer;
@@ -28,7 +28,7 @@
 }
 
 .dropdown:hover {
-    background: #aaa;
+    background: #252525;
 }
 
 .dropdown h1 {
@@ -47,6 +47,7 @@
     transition: opacity 1s ease;
     -webkit-transition: opacity 1s ease;
     -moz-transition: opacity 1s ease;
+    border-radius: 10px;
     width: 100%;
     top: 10vh;
     right: 0;
@@ -58,7 +59,7 @@
     text-decoration: none;
     font-size: 24px;
     padding: 12px;
-    background: #888;
+    background: #444;
     color: #fff;
     transition: background 1s ease;
     -webkit-transition: background 1s ease;
@@ -66,5 +67,5 @@
 }
 
 .menu li a:hover {
-    background: #ccc;
+    background: #333;
 }

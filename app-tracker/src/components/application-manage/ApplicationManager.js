@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './ApplicationManager.css'
 
 /**
@@ -15,9 +16,29 @@ import './ApplicationManager.css'
  */
 const ApplicationManager = () => {
 
+    const [company, setCompany] = useState("");
+    const [description, setDescription] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(company + "\n" + description);
+    }
+
+    handleSubmit.bind(this);
+
     return (
         <div className="app-manager">
-            <h1>ApplicationManager</h1>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Company/Position:
+                </label>
+                <input type="text" name="company" maxLength="80" onChange={e => setCompany(e.target.value)} />
+                <label>
+                    Notes: 
+                </label>
+                <textarea name="company" rows="3" maxLength="800" onChange={e => setDescription(e.target.value)} />
+                <input type="submit" value="Add Application" />
+            </form>
         </div>
     );
 }
