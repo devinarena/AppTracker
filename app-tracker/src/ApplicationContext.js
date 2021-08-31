@@ -1,6 +1,9 @@
 import React from 'react'
 
-export const AppsContext = React.createContext({
+const AppsContext = React.createContext({
     apps: [],
     removeApp: () => {},
+    addApp: () => {},
 });
+
+export default AppsContext;

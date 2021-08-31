@@ -1,5 +1,5 @@
 
-import{ AppsContext } from '../../ApplicationContext';
+import AppsContext from '../../ApplicationContext';
 import './ApplicationCard.css'
 
 /**
@@ -31,7 +31,7 @@ const ApplicationCard = (props) => {
                 return (
                     <div className="app-card">
                         <h1>{props.app.company}</h1>
-                        <p>{props.app.date}</p>
+                        <p>{props.app.date.toLocaleDateString()}</p>
                         <p>Interviews: {props.app.interviews}</p>
                         <p>{status()}</p>
                         <div className="buttons">
