@@ -6,7 +6,15 @@ import ApplicationView from './components/application-view/ApplicationView';
 import AppsContext from './ApplicationContext';
 import { useState, useEffect } from 'react';
 
-function AppTracker() {
+/**
+ * @file AppTracker.js
+ * @author Devin Arena
+ * @description Parent widget containing ApplicationManager and
+ *              ApplicationViewer, also stores some global state.
+ * @since 8/27/2021
+ */
+
+const AppTracker = () => {
 
   const [apps, setApps] = useState([]);
   const [createdApps, setCreatedApps] = useState(0);
@@ -55,6 +63,10 @@ function AppTracker() {
     }));
   }
 
+  /**
+   * Hook for when the web application initializes, loads
+   * application and user data from local storage.
+   */
   useEffect(() => {
     const apps = localStorage.getItem("applications");
     if (apps != null)

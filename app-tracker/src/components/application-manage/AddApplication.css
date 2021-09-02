@@ -52,6 +52,7 @@
     border-radius: 10px;
     color: #fff;
     resize: none;
+    overflow: hidden;
     transition: border 1s ease;
     -webkit-transition: border 1s ease;
     -moz-transition: border 1s ease;
