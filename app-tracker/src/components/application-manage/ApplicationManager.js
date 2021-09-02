@@ -1,7 +1,6 @@
-import { useContext, useState } from 'react';
-import AppsContext from '../../ApplicationContext'
-import Application from '../../Application';
+import AddApplication from './AddApplication';
 import './ApplicationManager.css'
+import ApplicationStats from './ApplicationStats';
 
 /**
  * @file ApplicationManager.js
@@ -18,37 +17,10 @@ import './ApplicationManager.css'
  */
 const ApplicationManager = () => {
 
-    const [company, setCompany] = useState("");
-    const [notes, setNotes] = useState("");
-
-    const appsContext = useContext(AppsContext);
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (company.length === 0)
-            return;
-        let date = new Date();
-        let interviews = 0;
-        let offer = false;
-        let rejection = false;
-        let app = new Application(company, notes, date, interviews, offer, rejection);
-        appsContext.addApp(app);
-    }
-
     return (
         <div className="app-manager">
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Company/Position:
-                </label>
-                <input type="text" name="company" maxLength="80" onChange={e => setCompany(e.target.value)} />
-                <label>
-                    Notes: 
-                </label>
-                <textarea name="company" rows="3" maxLength="800" onChange={e => setNotes(e.target.value)} />
-                <input type="submit" value="Add Application" />
-                <button name="advanced" >Advanced</button> 
-            </form>
+            <AddApplication />
+            <ApplicationStats />
         </div>
     );
 }

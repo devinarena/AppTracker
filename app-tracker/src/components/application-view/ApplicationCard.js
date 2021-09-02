@@ -27,17 +27,27 @@ const ApplicationCard = (props) => {
 
     return (
         <AppsContext.Consumer>
-            {({removeApp}) => {
+            {({ removeApp, updateApp }) => {
                 return (
-                    <div className="app-card">
+                    <div className={
+                        "app-card" +
+                        (props.app.offer ? " job-offer" : "") +
+                        (props.app.rejection && !props.app.offer ? " rejection" : "")
+                    }>
                         <h1>{props.app.company}</h1>
-                        <p>{props.app.date.toLocaleDateString()}</p>
+                        <p>{props.app.date}</p>
                         <p>Interviews: {props.app.interviews}</p>
-                        <p>{status()}</p>
+                        <p className="app-status">{status()}</p>
                         <div className="buttons">
-                            <button type="submit">✉️</button>
-                            <button type="submit">👔</button>
-                            <button type="submit">❌</button>
+                            <button type="submit" onClick={() => {
+                                updateApp(props.app.id, { offer: !props.app.offer });
+                            }}>✉️</button>
+                            <button type="submit" onClick={() => {
+                                updateApp(props.app.id, { interviews: props.app.interviews + 1 });
+                            }}>👔</button>
+                            <button type="submit" onClick={() => {
+                                updateApp(props.app.id, { rejection: !props.app.rejection });
+                            }}>❌</button>
                             <button type="submit" onClick={() => removeApp(props.app)}>🗑️</button>
                         </div>
                     </div>

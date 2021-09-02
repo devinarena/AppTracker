@@ -9,12 +9,21 @@
     margin: 1% 0;
 }
 
+.app-card * {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .app-card h1 {
     font-size: 2vw;
     transition: color 1s ease;
     -webkit-transition: color 1s ease;
     -moz-transition: color 1s ease;
     cursor: pointer;
+    width: 26%;
+    text-align: center;
 }
 
 .app-card h1:hover {
@@ -23,20 +32,22 @@
 
 .app-card p {
     font-size: 1.4vw;
+    width: 18%;
 }
 
 .buttons {
+    width: 20%;
     display: flex;
     justify-content: space-between;
-    width: 20%;
 }
 
 .buttons button {
+    width: auto;
     text-decoration: none;
     border: none;
     font-size: 1.5vw;
     border-radius: 50%;
-    padding: 4px;
+    padding: 2%;
     cursor: pointer;
     background: #ccc;
     transition: background 1s ease;
@@ -46,4 +57,38 @@
 
 .buttons button:hover {
     background: #fff;
+}
+
+.job-offer {
+    animation: 3s linear infinite glowBorder;
+}
+
+.rejection {
+    border: 1px solid #900;
+}
+
+.rejection * {
+    text-decoration: line-through;
+}
+
+.rejection .buttons {
+    text-decoration: none;
+}
+
+@keyframes glowBorder {
+    0%{
+        border: 3px solid #00ff37;
+    }
+    25%{
+        border: 3px solid #00fff2;
+    }
+    50%{
+        border: 3px solid #003f3c;
+    }
+    75%{
+        border: 3px solid #003f00;
+    }
+    100%{
+        border: 3px solid #00ff37;
+    }
 }
