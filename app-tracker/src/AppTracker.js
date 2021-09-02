@@ -56,8 +56,12 @@ function AppTracker() {
   }
 
   useEffect(() => {
-    if (localStorage.getItem("applications") != null)
-      setApps(JSON.parse(localStorage.getItem("applications")));
+    const apps = localStorage.getItem("applications");
+    if (apps != null)
+      setApps(JSON.parse(apps));
+    const createdApps = localStorage.getItem("createdApps");
+    if (createdApps != null)
+      setCreatedApps(parseInt(createdApps));
   }, []);
 
   /**
@@ -65,8 +69,7 @@ function AppTracker() {
    * any of those changes to localstorage to persist data.
    */
   useEffect(() => {
-    if (apps.length > 0)
-      localStorage.setItem("applications", JSON.stringify(apps));
+    localStorage.setItem("applications", JSON.stringify(apps));
     if (createdApps > 0)
       localStorage.setItem("createdApps", createdApps);
   }, [apps, createdApps]);
