@@ -20,7 +20,6 @@ const ApplicationView = () => {
         <div className="app-view">
             <AppsContext.Consumer>
                 {({ apps }) => {
-                    console.log(apps);
                     return [apps.map((app, id) => { return (<ApplicationCard key={id} app={app} />); })]
                 }}
             </AppsContext.Consumer>

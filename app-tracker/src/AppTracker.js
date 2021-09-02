@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import ApplicationManager from './components/application-manage/ApplicationManager'
 import ApplicationView from './components/application-view/ApplicationView';
 import AppsContext from './ApplicationContext';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 
 function AppTracker() {
 
