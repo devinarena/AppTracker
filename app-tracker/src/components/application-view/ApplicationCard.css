@@ -75,6 +75,10 @@
     text-decoration: none;
 }
 
+.interview-glow {
+    border: 2px solid #9acd32;
+}
+
 @keyframes glowBorder {
     0%{
         border: 3px solid #00ff37;

@@ -1,5 +1,6 @@
 .add-application {
-    width: 100%;
+    width: 96%;
+    max-height: 56%;
     margin: 2%;
     display: flex;
     justify-content: center;

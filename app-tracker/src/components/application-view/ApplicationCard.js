@@ -32,7 +32,8 @@ const ApplicationCard = (props) => {
                     <div className={
                         "app-card" +
                         (props.app.offer ? " job-offer" : "") +
-                        (props.app.rejection && !props.app.offer ? " rejection" : "")
+                        (props.app.rejection && !props.app.offer ? " rejection" : "") +
+                        (props.app.interviews > 0 && !props.app.offer && !props.app.rejection ? " interview-glow" : "")
                     }>
                         <h1>{props.app.company}</h1>
                         <p>{props.app.date}</p>
