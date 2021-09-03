@@ -24,6 +24,13 @@ const AddApplication = () => {
 
     const appsContext = useContext(AppsContext);
 
+    /**
+     * When the form is submitted, add a 
+     * new application using the entered information.
+     * 
+     * @param {Event} e to prevent default 
+     * @returns 
+     */
     const handleSubmit = (e) => {
         e.preventDefault();
         if (company.length === 0)

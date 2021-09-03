@@ -27,7 +27,7 @@ const ApplicationCard = (props) => {
 
     return (
         <AppsContext.Consumer>
-            {({ removeApp, updateApp }) => {
+            {({ removeApp, updateApp, showPopup }) => {
                 return (
                     <div className={
                         "app-card" +
@@ -35,7 +35,7 @@ const ApplicationCard = (props) => {
                         (props.app.rejection && !props.app.offer ? " rejection" : "") +
                         (props.app.interviews > 0 && !props.app.offer && !props.app.rejection ? " interview-glow" : "")
                     }>
-                        <h1>{props.app.company}</h1>
+                        <button type="submit" onClick={() => { showPopup(props.app) }}>{props.app.company}</button>
                         <p>{props.app.date}</p>
                         <p>Interviews: {props.app.interviews}</p>
                         <p className="app-status">{status()}</p>

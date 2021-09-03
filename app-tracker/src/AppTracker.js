@@ -4,7 +4,8 @@ import Navbar from './components/Navbar'
 import ApplicationManager from './components/application-manage/ApplicationManager'
 import ApplicationView from './components/application-view/ApplicationView';
 import AppsContext from './ApplicationContext';
-import { useState, useEffect } from 'react';
+import ApplicationPopup from './components/application-view/ApplicationPopup';
+import React, { useState, useEffect } from 'react';
 
 /**
  * @file AppTracker.js
@@ -14,10 +15,18 @@ import { useState, useEffect } from 'react';
  * @since 8/27/2021
  */
 
+/**
+ * Builds the main app with a provider for ApplicationContext,
+ * an ApplicationManager and Application view, and helper methods
+ * for application management.
+ * 
+ * @returns JSX for App
+ */
 const AppTracker = () => {
 
   const [apps, setApps] = useState([]);
   const [createdApps, setCreatedApps] = useState(0);
+  const [popupApplication, setPopupApplication] = useState(null);
 
   /**
    * Removes an application from stored applications
@@ -63,6 +72,10 @@ const AppTracker = () => {
     }));
   }
 
+  const showPopup = (application) => {
+    setPopupApplication(application);
+  }
+
   /**
    * Hook for when the web application initializes, loads
    * application and user data from local storage.
@@ -90,9 +103,10 @@ const AppTracker = () => {
     <div className="AppTracker">
       <Navbar />
       <div className="content">
-        <AppsContext.Provider value={{ apps, removeApp, addApp, updateApp, createdApps }}>
+        <AppsContext.Provider value={{ apps, removeApp, addApp, updateApp, createdApps, showPopup }}>
           <ApplicationManager />
           <ApplicationView />
+          <ApplicationPopup application={popupApplication} close={() => { setPopupApplication(null) }} />
         </AppsContext.Provider>
       </div>
     </div>

@@ -16,18 +16,23 @@
     align-items: center;
 }
 
-.app-card h1 {
+.app-card button {
     font-size: 2vw;
-    transition: color 1s ease;
-    -webkit-transition: color 1s ease;
-    -moz-transition: color 1s ease;
-    cursor: pointer;
     width: 26%;
+    transition: all 1s ease, color 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    cursor: pointer;
     text-align: center;
+    background: none;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
 }
 
-.app-card h1:hover {
+.app-card button:hover {
     color: #ccc;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .app-card p {
