@@ -1,7 +1,24 @@
+/* 
+    These are the components colors, I update them
+    in the code to allow users to change themes.
+ */
+:root {
+    --animated: none;
+    --root-background: #555;
+    --text-color: #fff;
+    --panel-gray: #464646;
+    --panel-border: #232323;
+    --dropdown-gray: #353535;
+    --dropdown-hover: #252525;
+    --form-background: #333;
+    --form-focus: #666;
+    --form-border: #000;
+    --card-color: #777;
+}
+
 .content {
     width: 100vw;
     height: 90vh;
     display: flex;
     flex-direction: row;
-    
 }

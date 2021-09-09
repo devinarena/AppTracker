@@ -4,7 +4,6 @@
     margin: 2%;
     display: flex;
     justify-content: center;
-    color: #fff;
 }
 
 .add-application form * {
@@ -14,7 +13,7 @@
 .add-application form {
     width: 80%;
     padding: 2%;
-    background: #444;
+    background: var(--panel-gray);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -25,56 +24,57 @@
 .add-application form label {
     font-size: 1.5vw;
     font-weight: bold;
+    color: var(--text-color);
 }
 
 .add-application form input[type=text] {
     padding: 1%;
     font-size: 1.5vw;
-    background: #333;
-    border: 3px solid black;
+    background: var(--form-background);
+    border: 3px solid var(--form-border);
     border-radius: 10px;
-    color: #fff;
-    transition: border 1s ease;
-    -webkit-transition: border 1s ease;
-    -moz-transition: border 1s ease;
+    color: var(--text-color);
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
 }
 
 .add-application form input[type=text]:focus {
     outline: none;
-    border: 3px solid #666;
+    border: 3px solid var(--form-focus);
 }
 
 .add-application form textarea {
     padding: 1%;
     font-size: 1.25vw;
-    background: #333;
-    border: 3px solid black;
+    background: var(--form-background);
+    border: 3px solid var(--form-border);
     border-radius: 10px;
-    color: #fff;
+    color: var(--text-color);
     resize: none;
     overflow: hidden;
-    transition: border 1s ease;
-    -webkit-transition: border 1s ease;
-    -moz-transition: border 1s ease;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
 }
 
 .add-application form textarea:focus {
     outline: none;
-    border: 3px solid #666;
+    border: 3px solid var(--form-focus);
 }
 
 .add-application form input[type=submit], .add-application form button {
     border: 3px solid #00467c;
     border-radius: 10px;
     background: #0063B1;
-    color: #fff;
+    color: var(--text-color);
     padding: 2%;
     font-size: 1.5vw;
     font-weight: bold;
     cursor: pointer;
-    transition: border 1s ease, background 1s ease;
-    -webkit-transition: border 1s ease, background 1s ease;
-    -moz-transition: border 1s ease, background 1s ease;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
 }
 
 .add-application form input[type=submit]:hover, .add-application form button:hover {

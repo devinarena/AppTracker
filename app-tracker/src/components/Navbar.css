@@ -1,5 +1,5 @@
 .navbar {
-    background: #464646;
+    background: var(--panel-gray);
     width: 100vw;
     height: 10vh;
     display: flex;
@@ -9,7 +9,7 @@
 }
 
 .navbar h1 {
-    color: #fff;
+    color: var(--text-color);
     margin-left: 2%;
 }
 
@@ -18,7 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #353535;
+    background: var(--dropdown-gray);
+    width: 15%;
     height: 100%;
     padding: 0 2vw;
     cursor: pointer;
@@ -28,7 +29,11 @@
 }
 
 .dropdown:hover {
-    background: #252525;
+    background: var(--dropdown-hover);
+}
+
+.dropdown input[type=file] {
+    display: none;
 }
 
 .dropdown h1 {
@@ -54,18 +59,25 @@
     z-index: 1;
 }
 
-.menu li a {
-    display: block;
-    text-decoration: none;
-    font-size: 24px;
-    padding: 12px;
-    background: #444;
-    color: #fff;
-    transition: background 1s ease;
-    -webkit-transition: background 1s ease;
-    -moz-transition: background 1s ease;
+.menu li {
+    text-align: center;
 }
 
-.menu li a:hover {
-    background: #333;
+.menu li button, .menu li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.5vw;
+    padding: 4% 0;
+    background: var(--panel-gray);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+}
+
+.menu li button:hover, .menu li a:hover {
+    background: var(--dropdown-gray);
 }

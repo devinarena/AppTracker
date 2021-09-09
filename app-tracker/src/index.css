@@ -1,6 +1,9 @@
 * {
   padding: 0;
   margin: 0;
+  transition: var(--animated) 1s ease;
+  -webkit-transition: var(--animated) 1s ease;
+  -moz-transition: var(--animated) 1s ease;
 }
 
 body {
@@ -10,7 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #555;
+  background-color: var(--root-background);
 }
 
 code {

@@ -55,7 +55,7 @@ const AddApplication = () => {
                 <label>
                     Notes:
                 </label>
-                <textarea name="notes" rows="3" maxLength="800" value={notes} onChange={e => setNotes(e.target.value)} />
+                <textarea name="notes" rows="3" maxLength="2000" value={notes} onChange={e => setNotes(e.target.value)} />
                 <input type="submit" value="Add Application" />
                 <button name="advanced" >Advanced</button>
             </form>

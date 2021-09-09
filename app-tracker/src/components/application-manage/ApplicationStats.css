@@ -5,13 +5,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
 }
 
 .stats-container {
     width: 80%;
     padding: 2%;
-    background: #444;
+    background: var(--panel-gray);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,6 +19,7 @@
 }
 
 .stats-container h1 {
+    color: var(--text-color);
     font-size: 2vw;
 }
 
@@ -40,11 +40,16 @@
 }
 
 .stats-list li h3 {
+    color: var(--text-color);
     font-size: 1.75vw;
 }
 
 .stats-list li p {
     font-size: 1.75vw;
+}
+
+.total-apps p {
+    color: var(--text-color);
 }
 
 .offers p {
