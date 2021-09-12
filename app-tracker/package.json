@@ -2,7 +2,7 @@
   "name": "app-tracker",
   "version": "1.0.0",
   "private": true,
-  "homepahe": "https://devinarena.github.io/AppTracker",
+  "homepage": "https://devinarena.github.io/AppTracker",
   "dependencies": {
     "gh-pages": "^3.2.3",
     "local-storage": "^2.0.0",
