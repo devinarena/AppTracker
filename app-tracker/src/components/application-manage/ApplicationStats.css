@@ -9,7 +9,7 @@
 
 .stats-container {
     width: 80%;
-    padding: 2%;
+    padding: 3%;
     background: var(--panel-gray);
     display: flex;
     flex-direction: column;
@@ -62,4 +62,27 @@
 
 .rejections p {
     color: #f00;
+}
+
+@media (max-width: 760px) {
+    .app-stats {
+        width: 100%;
+        max-height: 50%;
+    }
+
+    .stats-container {
+        height: auto;
+    }
+
+    .stats-container h1 {
+        font-size: 6vw;
+    }
+
+    .stats-container li h3 {
+        font-size: 5vw;
+    }
+
+    .stats-container li p {
+        font-size: 5vw;
+    }
 }

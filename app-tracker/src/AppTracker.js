@@ -6,6 +6,7 @@ import ApplicationView from './components/application-view/ApplicationView';
 import AppsContext from './ApplicationContext';
 import ApplicationPopup from './components/application-view/ApplicationPopup';
 import React, { useState, useEffect } from 'react';
+import DialogBox from './components/application-view/DialogBox';
 
 /**
  * @file AppTracker.js
@@ -28,6 +29,7 @@ const AppTracker = () => {
   const [apps, setApps] = useState([]);
   const [createdApps, setCreatedApps] = useState(0);
   const [popupApplication, setPopupApplication] = useState(null);
+  const [dialogText, setDialogText] = useState("");
 
   /**
    * Removes an application from stored applications
@@ -95,6 +97,16 @@ const AppTracker = () => {
       return new Application(createdApps + i, app.company, app.notes, app.date, app.interviews, app.offer, app.rejection);
     })));
     setCreatedApps(numApps + json.apps.length);
+    showDialog("Successfully imported " + json.apps.length + " applications!");
+  }
+
+  /**
+   * Shows a dialog box at the bottom of the screen for a few seconds.
+   * 
+   * @param {String} text the text to display
+   */
+  const showDialog = (text) => {
+    setDialogText(text);
   }
 
   /**
@@ -163,12 +175,13 @@ const AppTracker = () => {
 
   return (
     <div className="AppTracker">
-      <AppsContext.Provider value={{ theme, apps, removeApp, addApp, updateApp, createdApps, showPopup }}>
+      <AppsContext.Provider value={{ theme, apps, removeApp, addApp, updateApp, createdApps, showPopup, showDialog }}>
         <Navbar loadFromJSON={loadFromJSON} theme={theme} switchTheme={() => setTheme(theme === "light" ? "dark" : "light")} />
         <div className="content">
           <ApplicationManager />
           <ApplicationView />
           <ApplicationPopup application={popupApplication} close={() => setPopupApplication(null)} />
+          <DialogBox text={dialogText} />
         </div>
       </AppsContext.Provider>
     </div>

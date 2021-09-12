@@ -13,6 +13,8 @@ import AppsContext from '../ApplicationContext';
  * Builds the Navbar for application, containing a dropdown
  * menu with a list of operations for the user.
  * 
+ * @param props must contain theme data, loadFromJSON callback and switchTheme callback
+ * 
  * @returns JSX for a navbar element
  */
 const Navbar = (props) => {
@@ -90,8 +92,10 @@ const Navbar = (props) => {
             <h1>Menu</h1>
             <ul className="menu" style={{ opacity: 0 }} ref={menuRef} onTransitionEnd={e => hideMenu(e)}>
                 <li><button type="button" onClick={() => {
-                    if (document.documentElement.style.getPropertyValue("--animated") !== "all")
+                    if (document.documentElement.style.getPropertyValue("--animated") !== "all") {
                         props.switchTheme();
+                        appsContext.showDialog("Theme has been switched");
+                    }
                 }
                 }> Theme: {props.theme === "dark" ? "🌙" : "🌞"}</button></li>
                 <li><a href={download()} download="apps.json">Export Data</a></li>

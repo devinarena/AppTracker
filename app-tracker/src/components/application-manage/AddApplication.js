@@ -29,10 +29,18 @@ const AddApplication = () => {
      * new application using the entered information.
      * 
      * @param {Event} e to prevent default 
-     * @returns 
      */
     const handleSubmit = (e) => {
         e.preventDefault();
+        submitApp();
+    }
+
+    /**
+     * Submits an application, adding it to the list of apps.
+     * 
+     * @returns {Application} app the submitted application 
+     */
+    const submitApp = () => {
         if (company.length === 0)
             return;
         let date = new Date().toLocaleDateString();
@@ -41,25 +49,35 @@ const AddApplication = () => {
         let rejection = false;
         let app = new Application(appsContext.createdApps, company, notes, date, interviews, offer, rejection);
         appsContext.addApp(app);
+        appsContext.showDialog("Successfully added application for " + company);
         setCompany("");
         setNotes("");
+        return app;
     }
 
     return (
-        <div className="add-application">
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Company/Position:
-                </label>
-                <input type="text" name="company" value={company} maxLength="80" onChange={e => setCompany(e.target.value)} />
-                <label>
-                    Notes:
-                </label>
-                <textarea name="notes" rows="3" maxLength="2000" value={notes} onChange={e => setNotes(e.target.value)} />
-                <input type="submit" value="Add Application" />
-                <button name="advanced" >Advanced</button>
-            </form>
-        </div>
+        <AppsContext.Consumer>
+            {({ showPopup }) => {
+                return (
+                    <div className="add-application">
+                        <form onSubmit={handleSubmit}>
+                            <label>
+                                Company/Position:
+                            </label>
+                            <input type="text" name="company" value={company} maxLength="80" onChange={e => setCompany(e.target.value)} />
+                            <label>
+                                Notes:
+                            </label>
+                            <textarea name="notes" rows="3" maxLength="2000" value={notes} onChange={e => setNotes(e.target.value)} />
+                            <input type="submit" value="Add Application" />
+                            <button name="advanced" onClick={() => {
+                                showPopup(submitApp());
+                            }}>Add Advanced</button>
+                        </form>
+                    </div>
+                );
+            }}
+        </AppsContext.Consumer>
     );
 }
 

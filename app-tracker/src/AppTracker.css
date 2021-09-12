@@ -16,9 +16,28 @@
     --card-color: #777;
 }
 
-.content {
+.AppTracker {
     width: 100vw;
     height: 90vh;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
+}
+
+@media (max-width: 760px) {
+    .AppTracker {
+        width: 100%;
+        height: auto;
+    }
+    
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
 }

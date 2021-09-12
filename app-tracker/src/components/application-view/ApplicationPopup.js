@@ -44,9 +44,10 @@ const ApplicationPopup = (props) => {
         e.preventDefault();
 
         const dates = date.split("-");
-        const formatDate = dates[1] + "/" + dates[2] + "/" + dates[0];
+        const formatDate = (dates[1] > "09" ? dates[1] : dates[1].charAt(1)) + "/" + (dates[2] > "09" ? dates[2] : dates[2].charAt(1)) + "/" + dates[0];
 
         appsContext.updateApp(props.application.id, { company: company, notes: notes, date: formatDate, interviews: interviews });
+        appsContext.showDialog("Successfully updated application for " + company);
         popup.current.style.opacity = 0;
         setClosing(true);
     }

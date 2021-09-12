@@ -12,7 +12,7 @@
 
 .add-application form {
     width: 80%;
-    padding: 2%;
+    padding: 3%;
     background: var(--panel-gray);
     display: flex;
     flex-direction: column;
@@ -56,6 +56,7 @@
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
+    min-height: 20px;
 }
 
 .add-application form textarea:focus {
@@ -80,4 +81,31 @@
 .add-application form input[type=submit]:hover, .add-application form button:hover {
     border: 3px solid #0063B1;
     background: #0191ff;
+}
+
+@media (max-width: 760px) {
+    .add-application {
+        width: 100%;
+        min-height: 50%;
+    }
+
+    .add-application form {
+        overflow-y: auto;
+    }
+
+    .add-application form label {
+        font-size: 5vw;
+    }
+
+    .add-application form input[type=text] {
+        font-size: 5vw;
+    }
+
+    .add-application form textarea {
+        font-size: 4.25vw;
+    }
+
+    .add-application form input[type=submit], .add-application form button {
+        font-size: 4.25vw;
+    }
 }

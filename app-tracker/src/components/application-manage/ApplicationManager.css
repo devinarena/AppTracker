@@ -5,6 +5,11 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    overflow-x: hidden;
 }
 
+@media (max-width: 760px) {
+    .app-manager {
+        width: 100%;
+        height: auto;
+    }
+}

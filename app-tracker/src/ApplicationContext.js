@@ -7,6 +7,7 @@ const AppsContext = React.createContext({
     addApp: () => { },
     updateApp: () => { },
     showPopup: () => { },
+    showDialog: () => { },
     createdApps: 0,
 });
 

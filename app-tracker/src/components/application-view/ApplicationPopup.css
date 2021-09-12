@@ -35,7 +35,7 @@
     justify-content: center;
 }
 
-.popup form * {
+.popup form > * {
     margin-top: 0.5%;
     margin-bottom: 0.5%;
 }
@@ -46,6 +46,7 @@
 }
 
 .popup form input:not([type=submit]) {
+    width: auto;
     padding: 1%;
     font-size: 1.5vw;
     background: var(--form-background);
@@ -122,4 +123,31 @@ input[type=number] {
 .popup-buttons input[type=submit]:hover, .popup-buttons button:hover {
     border: 3px solid #0063B1;
     background: #0191ff;
+}
+
+@media (max-width: 760px) {
+    .popup {
+        width: 80%;
+        height: auto;
+    }
+
+    .popup form > * {
+        margin: 1% 0;   
+    }
+
+    .popup form label {
+        font-size: 6.5vw;
+    }
+
+    .popup form input:not([type=submit]) {
+        font-size: 5vw;
+    }
+
+    .popup form textarea {
+        font-size: 4.25vw;
+    }
+
+    .popup-buttons input[type=submit], .popup-buttons button {
+        font-size: 7vw;
+    }
 }

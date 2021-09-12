@@ -1,7 +1,7 @@
 .app-card {
     width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 12px;
     background: var(--card-color);
@@ -9,16 +9,24 @@
     margin: 1% 0;
 }
 
-.app-card * {
-    width: 20%;
+.app-information {
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.app-card button {
+.app-information > * {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-information button {
     font-size: 2vw;
-    width: 26%;
+    width: auto;
+    padding: 0 0px;
     transition: all 1s ease, color 1s ease;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -38,7 +46,6 @@
 .app-card p {
     color: var(--text-color);
     font-size: 1.4vw;
-    width: 18%;
 }
 
 .buttons {
@@ -100,5 +107,27 @@
     }
     100%{
         border: 3px solid #00ff37;
+    }
+}
+
+@media (max-width: 760px) {
+    .app-information {
+        width: 60%;
+        flex-direction: column;
+    }
+    .app-information > * {
+        width: 100%;
+    }
+    .app-card button {
+        font-size: 5vw;
+    }
+    .app-card p {
+        font-size: 3.5vw;
+    }
+    .buttons {
+        width: 40%;
+    }
+    .buttons button {
+        font-size: 5vw;
     }
 }
