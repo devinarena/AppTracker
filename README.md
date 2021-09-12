@@ -1,2 +1,2 @@
 # AppTracker
-A React web app that tracks your internship and job applications.
+A React web app you can use to track your internship and job applications.
