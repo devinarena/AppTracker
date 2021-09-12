@@ -6,7 +6,7 @@ import ApplicationView from './components/application-view/ApplicationView';
 import AppsContext from './ApplicationContext';
 import ApplicationPopup from './components/application-view/ApplicationPopup';
 import React, { useState, useEffect } from 'react';
-import DialogBox from './components/application-view/DialogBox';
+import DialogBox from './components/DialogBox';
 
 /**
  * @file AppTracker.js
