@@ -1,0 +1,30 @@
+.dialog-box {
+    max-width: 80%;
+    position: fixed;
+    display: flex;
+    padding: 12px;
+    border-radius: 20px;
+    bottom: 5%;
+    background: var(--dropdown-gray);
+    pointer-events: none;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    opacity: 1;
+}
+
+.dialog-box.hidden {
+    opacity: 0;
+}
+
+.dialog-box p {
+    font-weight: bold;
+    font-size: 1.8vw;
+    color: var(--text-color);
+}
+
+@media (max-width: 760px) {
+    .dialog-box p {
+        font-size: 4vw;
+    }
+}
