@@ -1,6 +1,6 @@
 .navbar {
-    background: var(--panel-gray);
-    width: 100%;
+    background: #464646;
+    width: 100vw;
     height: 10vh;
     display: flex;
     flex-direction: row;
@@ -9,91 +9,44 @@
 }
 
 .navbar h1 {
-    font-size: 3.5vw;
-    color: var(--text-color);
+    color: #fff;
     margin-left: 2%;
+}
+
+.navbar ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar ul li {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a {
+    color: #fff;
+    font-size: 1.25vw;
+    text-decoration: none;
 }
 
 .dropdown {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--dropdown-gray);
-    width: 15%;
-    height: 100%;
-    padding: 0 2vw;
-    cursor: pointer;
-    transition: background 1s ease;
-    -webkit-transition: background 1s ease;
-    -moz-transition: background 1s ease;
-}
-
-.dropdown:hover {
-    background: var(--dropdown-hover);
-}
-
-.dropdown input[type=file] {
-    display: none;
-}
-
-.dropdown h1 {
-    margin: 0;
-}
-
-.menu {
-    visibility: hidden;
-    display: flex;
-    position: absolute;
-    list-style: none;
-    flex-direction: column;
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
-    box-sizing: border-box;
-    transition: opacity 1s ease;
-    -webkit-transition: opacity 1s ease;
-    -moz-transition: opacity 1s ease;
-    border-radius: 10px;
-    width: 100%;
-    top: 10vh;
+    display: inline-block;
     right: 0;
-    z-index: 1;
 }
 
-.menu li {
-    text-align: center;
+.dropdown ul {
+    display: none;
+    position: absolute;
 }
 
-.menu li button, .menu li a {
+.dropdown:hover .dropdown ul {
+    display: flex;
+}
+
+.dropdown ul li {
     display: block;
-    width: 100%;
-    text-decoration: none;
-    font-size: 1.5vw;
-    padding: 4% 0;
-    background: var(--panel-gray);
-    color: var(--text-color);
-    border: none;
-    cursor: pointer;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-}
-
-.menu li button:hover, .menu li a:hover {
-    background: var(--dropdown-gray);
-}
-
-@media (max-width: 760px) {
-    .dropdown {
-        width: 30%;
-    }
-
-    .navbar h1 {
-        font-size: 6vw;
-    }
-
-    .menu li button, .menu li a {
-        font-size: 5vw;
-        font-weight: bold;
-    }
 }
