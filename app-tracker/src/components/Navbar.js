@@ -98,7 +98,7 @@ const Navbar = (props) => {
                     }
                 }
                 }> Theme: {props.theme === "dark" ? "🌙" : "🌞"}</button></li>
-                <li><a href={download()} download="apps.json">Export Data</a></li>
+                <li><a href={download()} download="apps.json" onClick={() => appsContext.showDialog("Downloaded exported data as JSON file.")}>Export Data</a></li>
                 <li><button type="button" onClick={() => inputRef.current.click()}>Import Data</button></li>
             </ul>
         </div>

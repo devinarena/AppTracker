@@ -18,6 +18,8 @@
 
 .app-information > * {
     width: 25%;
+    min-width: 25%;
+    max-width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +27,7 @@
 
 .app-information button {
     font-size: 2vw;
+    overflow-x: hidden;
     width: auto;
     padding: 0 0px;
     transition: all 1s ease, color 1s ease;
@@ -117,6 +120,7 @@
     }
     .app-information > * {
         width: 100%;
+        max-width: 100%;
     }
     .app-card button {
         font-size: 5vw;
