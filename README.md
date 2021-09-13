@@ -34,8 +34,8 @@ Both dark and light themes are supported.
 Mobile and desktop devices are supported via media queries.
 
 ## Images
-![github-images/desktop.png](Desktop Image)
-![github-images/mobile.png](Mobile Image)
+![Desktop Image](github-images/desktop.png)
+![Mobile Image](github-images/mobile.png)
 
 ## License
 Distributed under the MIT license.
