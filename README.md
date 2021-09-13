@@ -34,10 +34,17 @@ Both dark and light themes are supported.
 Mobile and desktop devices are supported via media queries.
 
 ## Images
+
+<div align="center">
+
+  ### Desktop
+  ![Mobile Image](github-images/desktop.png)
+  
+</div>
+
 <div align="center">
   
-  ![Desktop Image](github-images/desktop.png)
-  
+  ### Mobile
   ![Mobile Image](github-images/mobile.png)
   
 </div>
