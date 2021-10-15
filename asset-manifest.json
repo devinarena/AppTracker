@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/AppTracker/static/css/main.0a62c7e5.chunk.css",
+    "main.css": "/AppTracker/static/css/main.69dbcf86.chunk.css",
     "main.js": "/AppTracker/static/js/main.c61f7e47.chunk.js",
     "main.js.map": "/AppTracker/static/js/main.c61f7e47.chunk.js.map",
     "runtime-main.js": "/AppTracker/static/js/runtime-main.3524d445.js",
@@ -8,13 +8,13 @@
     "static/js/2.7ef04074.chunk.js": "/AppTracker/static/js/2.7ef04074.chunk.js",
     "static/js/2.7ef04074.chunk.js.map": "/AppTracker/static/js/2.7ef04074.chunk.js.map",
     "index.html": "/AppTracker/index.html",
-    "static/css/main.0a62c7e5.chunk.css.map": "/AppTracker/static/css/main.0a62c7e5.chunk.css.map",
+    "static/css/main.69dbcf86.chunk.css.map": "/AppTracker/static/css/main.69dbcf86.chunk.css.map",
     "static/js/2.7ef04074.chunk.js.LICENSE.txt": "/AppTracker/static/js/2.7ef04074.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3524d445.js",
     "static/js/2.7ef04074.chunk.js",
-    "static/css/main.0a62c7e5.chunk.css",
+    "static/css/main.69dbcf86.chunk.css",
     "static/js/main.c61f7e47.chunk.js"
   ]
 }
