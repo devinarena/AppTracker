@@ -17,18 +17,18 @@
 }
 
 .app-information > * {
-    width: 25%;
-    min-width: 25%;
-    max-width: 25%;
+    width: 20;
+    min-width: 22%;
+    max-width: 22%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .app-information button {
-    font-size: 2vw;
-    overflow-x: hidden;
-    width: auto;
+    font-size: 1.5vw;
+    min-width: 34%; 
+    max-width: 34%;
     padding: 0 0px;
     transition: all 1s ease, color 1s ease;
     -webkit-transition: all 1s ease;
@@ -119,7 +119,7 @@
         flex-direction: column;
     }
     .app-information > * {
-        width: 100%;
+        min-width: 100%;
         max-width: 100%;
     }
     .app-card button {
